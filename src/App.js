@@ -1,10 +1,18 @@
-import Header from "./components/Header"
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-    </div>
+    <>
+      <Router>
+        <div>
+          <Navbar></Navbar>
+          <Switch>
+            <Route path="/" exact />
+          </Switch>
+        </div>
+      </Router>
+    </>
   );
 }
 
