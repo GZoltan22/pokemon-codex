@@ -9,6 +9,8 @@ function Cards() {
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
+            {/* Path TODO
+            it should be later on redirect a page where it can show every pokemon in detail*/}
             <CardItem
               src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
               text="Pokemon description comes here. Bulbasaur is a grass and poison type pokemon etc."
