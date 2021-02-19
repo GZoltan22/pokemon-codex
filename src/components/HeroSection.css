@@ -1,10 +1,13 @@
-video {
+/* If u want to use a vodeo u can past it in the HeroSection.js and uncomment this css commet below
+or u can use a picture which is in the .hero-container below. */
+
+/* video {
   object-fit: cover;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: -1;
-}
+} */
 
 .hero-container {
   background: url("https://coverfiles.alphacoders.com/501/50183.jpg") center
