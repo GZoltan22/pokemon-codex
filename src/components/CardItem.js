@@ -2,12 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function CardItem(props) {
+  const pokemonURL = props.pokemon.url;
+  const pokemonID = pokemonURL.split("/")[6]
+
   return (
     <>
       <li className="cards__item">
         <Link className="cards__item__link" to={props.path}>
           <figure className="cards__item__pic-wrap" data-category={props.label}>
-            <img src={props.src} alt="Pokemon" className="cards__item__img" />
+            <img
+              src={
+                `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonID}.png`
+              }
+              alt="Pokemon"
+              className="cards__item__img"
+            />
           </figure>
           <div className="cards__item__info">
             <h5 className="cards__item__text">{props.text}</h5>

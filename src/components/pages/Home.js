@@ -22,8 +22,6 @@ function Home() {
 
     return data;
   };
-
-  console.log(pokemons.results);
   return (
     <>
       <HeroSection />

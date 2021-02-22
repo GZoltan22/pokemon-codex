@@ -4,6 +4,7 @@ import "./Cards.css";
 
 function Cards({ pokemons }) {
   return (
+
     <div className="cards">
       <h1>Check out these EPIC Pokemons!</h1>
       <div className="cards__container">
@@ -13,7 +14,7 @@ function Cards({ pokemons }) {
             it should be later on redirect a page where it can show every pokemon in detail*/}
             {pokemons.map((pokemon) => (
               <CardItem
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+                pokemon={pokemon}
                 text="Pokemon description comes here. Bulbasaur is a grass and poison type pokemon etc."
                 label={pokemon.name}
                 path="services"
