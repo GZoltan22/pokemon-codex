@@ -25,9 +25,9 @@ function Home() {
   console.log(pokemons.results);
   return (
     <>
-<<<<<<< Updated upstream
-      <HeroSection> /</HeroSection>
-      <Cards />
+      <HeroSection />
+      <Cards pokemons={pokemons} />
+      <Footer />
     </>
   );
 }
