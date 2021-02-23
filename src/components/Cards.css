@@ -1,3 +1,33 @@
+/* My old css solution for cards */
+
+/* .cards__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__items {
+  position: relative;
+  display: block;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  margin-left: 20px;
+  padding: 70px;
+}
+
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 880px;
+  margin: auto;
+} */
+
+
 .cards {
   padding: 4rem;
   background: #fff;
@@ -11,6 +41,7 @@ h1 {
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
   max-width: 1120px;
   width: 90%;
   margin: 0 auto;
@@ -101,7 +132,7 @@ h1 {
 
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
-    width: 84%;
+    width: 24%;
   }
 }
 

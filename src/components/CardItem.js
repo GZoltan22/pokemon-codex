@@ -3,17 +3,15 @@ import { Link } from "react-router-dom";
 
 function CardItem(props) {
   const pokemonURL = props.pokemon.url;
-  const pokemonID = pokemonURL.split("/")[6]
+  const pokemonID = pokemonURL.split("/")[6];
 
   return (
     <>
-      <li className="cards__item">
+      <li className="cards__item" key={pokemonID}>
         <Link className="cards__item__link" to={props.path}>
           <figure className="cards__item__pic-wrap" data-category={props.label}>
             <img
-              src={
-                `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonID}.png`
-              }
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonID}.png`}
               alt="Pokemon"
               className="cards__item__img"
             />

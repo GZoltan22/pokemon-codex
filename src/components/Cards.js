@@ -8,13 +8,14 @@ function Cards({ pokemons }) {
     <div className="cards">
       <h1>Check out these EPIC Pokemons!</h1>
       <div className="cards__container">
-        <div className="cards__wrapper">
+        {/* <div className="cards__wrapper"> */}
           <ul className="cards__items">
             {/* Path TODO
             it should be later on redirect a page where it can show every pokemon in detail*/}
-            {pokemons.map((pokemon) => (
+            {pokemons.map((pokemon, index) => (
               <CardItem
                 pokemon={pokemon}
+                key={index}
                 text="Pokemon description comes here. Bulbasaur is a grass and poison type pokemon etc."
                 label={pokemon.name}
                 path="services"
@@ -41,7 +42,7 @@ function Cards({ pokemons }) {
               path="services"
             />
           </ul> */}
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );
