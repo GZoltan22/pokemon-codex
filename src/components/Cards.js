@@ -21,13 +21,19 @@ function Cards({ pokemons }) {
   return (
     <div className="cards">
       <Swiper
+        breakpoints={{
+          720: {
+            slidesPerView: 4,
+          },
+        }}
+        // autoHeight={true}
         spaceBetween={10}
-        slidesPerView={4}
+        slidesPerView={2}
         navigation
+        // if u want to pagination or scrollbar just enable it
         // pagination={{ clickable: false }}
         // scrollbar={{ draggable: false }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={console.log("slide change")}
+
         observer={true}
         observeParents={true}
       >
@@ -37,11 +43,11 @@ function Cards({ pokemons }) {
             <ul className="cards__items">
               {/* Path TODO
             it should be later on redirect a page where it can show every pokemon in detail*/}
-              {pokemons.map((pokemon) => {
+              {pokemons.map((pokemon, index) => {
                 const pokemonURL = pokemon.url;
                 const pokemonID = pokemonURL.split("/")[idPositionInTheURL];
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                     <CardItem
                       pokemon={pokemon}
                       key={pokemonID}
