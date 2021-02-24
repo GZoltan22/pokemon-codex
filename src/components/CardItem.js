@@ -1,25 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// import "swiper/swiper-bundle.css";
+
+
+
 function CardItem(props) {
-  // const [pokemontypes, setPokemonTypes] = useState([]);
-
-  // useEffect(() => {
-  //   const getPokemonsTypes = async () => {
-  //     const pokemonsTypesFromServer = await fetchPookemonsTypes();
-  //     setPokemonTypes(pokemonsTypesFromServer.results);
-  //   };
-  //   getPokemonsTypes();
-  // }, []);
-
-  // // Fetch Pokemons
-  // const fetchPookemonsTypes = async () => {
-  //   const res = await fetch("https://pokeapi.co/api/v2/pokemon");
-  //   const data = await res.json();
-
-  //   return data;
-  // };
-
   return (
     <>
       <li className="cards__item">
@@ -31,9 +17,9 @@ function CardItem(props) {
               className="cards__item__img"
             />
           </figure>
-          <div className="cards__item__info">
+          {/* <div className="cards__item__info">
             <h5 className="cards__item__text">{props.text}</h5>
-          </div>
+          </div> */}
         </Link>
       </li>
     </>
