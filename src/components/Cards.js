@@ -13,7 +13,7 @@ function Cards({ pokemons }) {
           <ul className="cards__items">
             {/* Path TODO
             it should be later on redirect a page where it can show every pokemon in detail*/}
-            {pokemons.map((pokemon, index) => {
+            {pokemons.map((pokemon) => {
               const pokemonURL = pokemon.url;
               const pokemonID = pokemonURL.split("/")[6];
               return (
