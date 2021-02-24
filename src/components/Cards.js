@@ -20,10 +20,11 @@ function Cards({ pokemons }) {
 
   return (
     <div className="cards">
+      <h1>Check out these EPIC Pokemons!</h1>
       <Swiper
         breakpoints={{
           720: {
-            slidesPerView: 4,
+            slidesPerView: 5,
           },
         }}
         // autoHeight={true}
@@ -37,7 +38,7 @@ function Cards({ pokemons }) {
         observer={true}
         observeParents={true}
       >
-        <h1>Check out these EPIC Pokemons!</h1>
+        
         <div className="cards__container">
           <div className="cards__wrapper">
             <ul className="cards__items">

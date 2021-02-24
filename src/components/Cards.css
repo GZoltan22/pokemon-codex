@@ -28,7 +28,9 @@
 } */
 
 .cards {
-  padding: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 0rem;
   background: #fff;
 }
 
