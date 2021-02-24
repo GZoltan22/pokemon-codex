@@ -15,7 +15,7 @@ function Home() {
     getPokemons();
   }, []);
 
-  // Fetch Pokemons TODO
+  // Fetch Pokemons
   const fetchPookemons = async () => {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon");
     const data = await res.json();

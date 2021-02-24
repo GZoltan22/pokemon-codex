@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function CardItem(props) {
-  const pokemonURL = props.pokemon.url;
-  const pokemonID = pokemonURL.split("/")[6];
+  // const [pokemontypes, setPokemonTypes] = useState([]);
+
+  // useEffect(() => {
+  //   const getPokemonsTypes = async () => {
+  //     const pokemonsTypesFromServer = await fetchPookemonsTypes();
+  //     setPokemonTypes(pokemonsTypesFromServer.results);
+  //   };
+  //   getPokemonsTypes();
+  // }, []);
+
+  // // Fetch Pokemons
+  // const fetchPookemonsTypes = async () => {
+  //   const res = await fetch("https://pokeapi.co/api/v2/pokemon");
+  //   const data = await res.json();
+
+  //   return data;
+  // };
 
   return (
     <>
-      <li className="cards__item" key={pokemonID}>
-        <Link className="cards__item__link" to={props.path}>
+      <li className="cards__item">
+        <Link className="cards__item__link" to={`pokemon/${props.id}`}>
           <figure className="cards__item__pic-wrap" data-category={props.label}>
             <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonID}.png`}
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${props.id}.png`}
               alt="Pokemon"
               className="cards__item__img"
             />
