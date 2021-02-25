@@ -17,7 +17,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function Cards({ pokemons }) {
   var idPositionInTheURL = 6;
-  console.log(pokemons);
+
   return (
     <div className="cards">
       <h1>Check out these EPIC Pokemons!</h1>
