@@ -27,7 +27,6 @@ function Cards({ pokemons }) {
             slidesPerView: 5,
           },
         }}
-        // autoHeight={true}
         spaceBetween={10}
         slidesPerView={2}
         navigation

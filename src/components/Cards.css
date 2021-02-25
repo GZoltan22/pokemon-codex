@@ -1,32 +1,3 @@
-/* My old css solution for cards */
-
-/* .cards__items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card__items {
-  position: relative;
-  display: block;
-  width: 200px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-
-  margin-left: 20px;
-  padding: 70px;
-}
-
-.card__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 880px;
-  margin: auto;
-} */
-
 .cards {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -122,13 +93,93 @@ h1 {
 }
 
 .cards__item__info {
-  padding: 20px 30px 30px;
+  padding: 20px 5px 15px;
 }
 
 .cards__item__text {
   color: #252e48;
   font-size: 18px;
   line-height: 24px;
+}
+
+.cards__item__data {
+  float: left;
+  margin: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 5px;
+  color: #252e48;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.cards__item__data[target="grass"] {
+  background-color: #9bcc50;
+}
+
+.cards__item__data[target="poison"] {
+  background-color: #b97fc9;
+}
+
+.cards__item__data[target="fire"] {
+  background-color: #fd7d24;
+}
+
+.cards__item__data[target="flying"] {
+  background-color: #3dc7ef;
+}
+
+.cards__item__data[target="water"] {
+  background-color: #4592c4;
+}
+
+.cards__item__data[target="bug"] {
+  background-color: #729f3f;
+}
+
+.cards__item__data[target="normal"] {
+  background-color: #a4acaf;
+}
+
+.cards__item__data[target="psychic"] {
+  background-color: #f366b9;
+}
+
+.cards__item__data[target="electric"] {
+  background-color: #eed535;
+}
+
+.cards__item__data[target="rock"] {
+  background-color: #a38c21;
+}
+
+.cards__item__data[target="ice"] {
+  background-color: #51c4e7;
+}
+
+
+.cards__item__data[target="fighting"] {
+  background-color: #d56723;
+}
+
+.cards__item__data[target="fairy"] {
+  background-color: #fdb9e9;
+}
+
+.cards__item__data[target="steel"] {
+  background-color: #9eb7b8;
+}
+
+.cards__item__data[target="ground"] {
+  background-color: #f7de3f;
+}
+
+.cards__item__data[target="rock"] {
+  background-color: #a38c21;
+}
+
+.cards__item__data[target="ghost"] {
+  background-color: #7b62a3;
 }
 
 @media only screen and (min-width: 1200px) {

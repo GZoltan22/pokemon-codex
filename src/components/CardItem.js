@@ -3,9 +3,25 @@ import { Link } from "react-router-dom";
 
 // import "swiper/swiper-bundle.css";
 
-
-
 function CardItem(props) {
+  const [pokemonTypes, setPokemonType] = useState([]);
+
+  useEffect(() => {
+    const getPokemonTypes = async () => {
+      const pokemoTypesFromServer = await fetchPokemonTypes();
+      setPokemonType(pokemoTypesFromServer.types);
+    };
+    getPokemonTypes();
+  }, []);
+
+  // Fetch PokemonsóTypes
+  const fetchPokemonTypes = async () => {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${props.id}/`);
+    const data = await res.json();
+
+    return data;
+  };
+
   return (
     <>
       <li className="cards__item">
@@ -17,9 +33,16 @@ function CardItem(props) {
               className="cards__item__img"
             />
           </figure>
-          {/* <div className="cards__item__info">
-            <h5 className="cards__item__text">{props.text}</h5>
-          </div> */}
+          <div className="cards__item__info">
+            <h5 className="cards__item__text">Types: </h5>
+            {pokemonTypes.map((pokemonType, index) => {
+              return (
+                <h5 className="cards__item__data" target={pokemonType.type.name} key={index}>
+                  {pokemonType.type.name}
+                </h5>
+              );
+            })}
+          </div>
         </Link>
       </li>
     </>
