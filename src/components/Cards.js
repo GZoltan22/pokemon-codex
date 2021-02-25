@@ -17,7 +17,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function Cards({ pokemons }) {
   var idPositionInTheURL = 6;
-
+  console.log(pokemons);
   return (
     <div className="cards">
       <h1>Check out these EPIC Pokemons!</h1>
@@ -37,7 +37,7 @@ function Cards({ pokemons }) {
         observer={true}
         observeParents={true}
       >
-        
+
         <div className="cards__container">
           <div className="cards__wrapper">
             <ul className="cards__items">
@@ -59,7 +59,6 @@ function Cards({ pokemons }) {
                   </SwiperSlide>
                 );
               })}
-              ;
             </ul>
           </div>
         </div>
