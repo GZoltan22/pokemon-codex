@@ -19,7 +19,11 @@ function PokemonTypesCards({ types }) {
   return (
     <div>
       {types.map((type, index) => {
-        return <PokemonTypesCardItem type={type} key={index} />;
+        return (
+          <div>
+            <PokemonTypesCardItem type={type} key={index} />
+          </div>
+        );
       })}
     </div>
   );

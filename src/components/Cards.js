@@ -17,7 +17,6 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function Cards({ pokemons }) {
   var idPositionInTheURL = 6;
-
   return (
     <div className="cards">
       <h1>Check out these EPIC Pokemons!</h1>
@@ -37,14 +36,17 @@ function Cards({ pokemons }) {
         observer={true}
         observeParents={true}
       >
-
         <div className="cards__container">
           <div className="cards__wrapper">
             <ul className="cards__items">
               {/* Path TODO
             it should be later on redirect a page where it can show every pokemon in detail*/}
               {pokemons.map((pokemon, index) => {
-                const pokemonURL = pokemon.url;
+                var pokemonData = pokemon;
+                if (typeof pokemonData.url === "undefined") {
+                  pokemonData = pokemon.pokemon;
+                }
+                const pokemonURL = pokemonData.url;
                 const pokemonID = pokemonURL.split("/")[idPositionInTheURL];
                 return (
                   <SwiperSlide key={index}>
@@ -52,7 +54,7 @@ function Cards({ pokemons }) {
                       pokemon={pokemon}
                       key={pokemonID}
                       text="Pokemon description comes here."
-                      label={pokemon.name}
+                      label={pokemonData.name}
                       path=""
                       id={pokemonID}
                     />

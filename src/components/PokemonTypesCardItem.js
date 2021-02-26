@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from "react";
 import CardItem from "./CardItem";
+import Cards from "./Cards";
 
 function PokemonTypesCardItem({ type }) {
-  const [pokemonByType, setPokemonByType] = useState([]);
+  const [pokemonsByType, setPokemonsByType] = useState([]);
 
   useEffect(() => {
-    const getPokemonByType = async () => {
-      const pokemonByTypeFromServer = await fetchPokemonByType();
-      setPokemonByType(pokemonByTypeFromServer.pokemon);
+    const getPokemonsByType = async () => {
+      const pokemonsByTypeFromServer = await fetchPokemonsByType();
+      setPokemonsByType(pokemonsByTypeFromServer.pokemon.slice(0, 20));
     };
-    getPokemonByType();
+    getPokemonsByType();
   }, []);
 
   // Fetch Pokemons
-  const fetchPokemonByType = async () => {
+  const fetchPokemonsByType = async () => {
     const res = await fetch(type.url);
     const data = await res.json();
 
     return data;
   };
-  console.log(pokemonByType);
-  return (
+  console.log(type);
+  return pokemonsByType.length > 0 ? (
     <div>
-      <CardItem />
+      <Cards pokemons={pokemonsByType} />
     </div>
+  ) : (
+    <> </>
   );
 }
 
