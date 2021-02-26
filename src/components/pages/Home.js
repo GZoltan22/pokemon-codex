@@ -4,7 +4,6 @@ import Footer from "../Footer";
 import HeroSection from "../HeroSection";
 
 function Home({ pokemons }) {
-  console.log(pokemons);
   return (
     <>
       <HeroSection />

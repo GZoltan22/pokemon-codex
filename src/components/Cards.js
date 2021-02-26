@@ -15,11 +15,15 @@ import "swiper/components/scrollbar/scrollbar.scss";
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-function Cards({ pokemons }) {
+function Cards({ type, pokemons }) {
   var idPositionInTheURL = 6;
   return (
     <div className="cards">
-      <h1>Check out these EPIC Pokemons!</h1>
+      {typeof type !== "undefined" ? (
+        <h1>{type.name}</h1>
+      ) : (
+        <h1>Check out these EPIC Pokemons!</h1>
+      )}
       <Swiper
         breakpoints={{
           720: {

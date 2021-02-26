@@ -20,10 +20,10 @@ function PokemonTypesCardItem({ type }) {
 
     return data;
   };
-  console.log(type);
+
   return pokemonsByType.length > 0 ? (
     <div>
-      <Cards pokemons={pokemonsByType} />
+      <Cards type={type} pokemons={pokemonsByType} />
     </div>
   ) : (
     <> </>
