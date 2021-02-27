@@ -24,19 +24,19 @@ function App() {
     const data = await res.json();
 
     return data;
-  }; 
+  };
   return (
     <>
       <Router>
         <div>
-          <Navbar></Navbar>
+          <Navbar />
           <Switch>
             <Route path="/" exact>
               <Home pokemons={pokemons} />
             </Route>
-            <Route path="/pokemonTypes" component={PokemonTypes}  />
+            <Route path="/pokemonTypes" component={PokemonTypes} />
             <Route path="/pokemons">
-              <Pokemons pokemons={pokemons}/>
+              <Pokemons pokemons={pokemons} />
             </Route>
             <Route path="/pokemon/:id" component={PokemonDetails} />
           </Switch>
