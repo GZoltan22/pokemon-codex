@@ -1,6 +1,7 @@
 import "../../App.css";
 import PokemonTypesCards from "../PokemonTypesCards";
 import React, { useState, useEffect } from "react";
+import Footer from "../Footer";
 
 function PokemonTypes() {
   const [types, setTypes] = useState([]);
@@ -23,6 +24,7 @@ function PokemonTypes() {
   return (
     <>
       <PokemonTypesCards types={types} />
+      <Footer />
     </>
   );
 }
