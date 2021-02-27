@@ -22,9 +22,9 @@ function PokemonTypesCardItem({ type }) {
   };
 
   return pokemonsByType.length > 0 ? (
-    <div>
+    <>
       <Cards type={type} pokemons={pokemonsByType} />
-    </div>
+    </>
   ) : (
     <> </>
   );
