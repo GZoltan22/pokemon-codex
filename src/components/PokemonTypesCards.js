@@ -16,12 +16,15 @@ import "swiper/components/scrollbar/scrollbar.scss";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function PokemonTypesCards({ types }) {
+  var idPositionInTheURL = 6;
   return (
     <div>
-      {types.map((type, index) => {
+      {types.map((type) => {
+        const typeURL = type.url;
+        const typeID = typeURL.split("/")[idPositionInTheURL];
         return (
-          <div>
-            <PokemonTypesCardItem type={type} key={index} />
+          <div key={typeID}>
+            <PokemonTypesCardItem type={type} />
           </div>
         );
       })}
