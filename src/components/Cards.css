@@ -63,7 +63,7 @@ h1 {
   content: attr(data-category);
   position: absolute;
   bottom: 0;
-  margin-left: 10px;
+  margin-left: 0px;
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
   font-size: 15px;
@@ -157,7 +157,6 @@ h1 {
   background-color: #51c4e7;
 }
 
-
 .cards__item__data[target="fighting"] {
   background-color: #d56723;
 }
@@ -200,8 +199,14 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 826px) {
+@media only screen and (max-width: 1000px) {
   .cards__item__pic-wrap::after {
-    font-size: 10px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .cards__item__pic-wrap::after {
+    font-size: 12px;
   }
 }
