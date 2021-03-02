@@ -157,7 +157,6 @@ h1 {
   background-color: #51c4e7;
 }
 
-
 .cards__item__data[target="fighting"] {
   background-color: #d56723;
 }
@@ -201,6 +200,13 @@ h1 {
 }
 
 @media only screen and (max-width: 826px) {
+@media only screen and (max-width: 1000px) {
+  .cards__item__pic-wrap::after {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 890px) {
   .cards__item__pic-wrap::after {
     font-size: 10px;
   }
