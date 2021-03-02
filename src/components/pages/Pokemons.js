@@ -1,6 +1,13 @@
 import React from "react";
 import "../../App.css";
+import Footer from "../Footer";
+import HeroSection from "../HeroSection";
 
 export default function Pokemons() {
-  return <h1 className="pokemons">POKEMONS</h1>;
+  return (
+    <>
+      <HeroSection />
+      <Footer />
+    </>
+  );
 }
