@@ -9,7 +9,7 @@ import PokemonTypes from "./components/pages/PokemonTypes";
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
-
+  
   useEffect(() => {
     const getPokemons = async () => {
       const pokemonsFromServer = await fetchPookemons();
@@ -17,12 +17,12 @@ function App() {
     };
     getPokemons();
   }, []);
-
+  
   // Fetch Pokemons
   const fetchPookemons = async () => {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon");
     const data = await res.json();
-
+  
     return data;
   };
   return (
