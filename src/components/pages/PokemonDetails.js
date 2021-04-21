@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router";
 
 function PokemonDetails() {
-    return (
-        <div>
-            <p>PokemonDetails page</p>
-        </div>
-    )
+  const pathName = window.location.pathname;
+  const pokemonID = pathName.split("/").pop();
+
+  const pokemonUrl = `https`;
+  return (
+    <div>
+      <p>PokemonDetails page</p>
+    </div>
+  );
 }
 
 export default PokemonDetails;
