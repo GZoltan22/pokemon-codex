@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PokemonCards({pokemons}) {
+function PokemonsCards({pokemons}) {
     console.log(pokemons);
     return (
         <div>
@@ -9,4 +9,4 @@ function PokemonCards({pokemons}) {
     )
 }
 
-export default PokemonCards
+export default PokemonsCards

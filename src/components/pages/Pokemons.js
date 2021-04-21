@@ -2,13 +2,14 @@ import React from "react";
 import "../../App.css";
 import Footer from "../Footer";
 import HeroSection from "../HeroSection";
-import PokemonCards from "../PokemonCards";
+import PokemonsCards from "../PokemonsCards";
 
 export default function Pokemons({ pokemons }) {
   return (
     <>
-      <HeroSection />
-      <PokemonCards pokemons={pokemons} />
+    {/* Here Comes a searchBar TODO instead of HeroSection */}
+      {/* <HeroSection /> */}
+      <PokemonsCards pokemons={pokemons} />
       <Footer />
     </>
   );

@@ -14,7 +14,7 @@ function CardItem(props) {
     getPokemonTypes();
   }, []);
 
-  // Fetch PokemonsóTypes
+  // Fetch PokemonsTypes
   const fetchPokemonTypes = async () => {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${props.id}/`);
     const data = await res.json();
