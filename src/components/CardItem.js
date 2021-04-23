@@ -14,7 +14,7 @@ function CardItem(props) {
     getPokemonTypes();
   }, []);
 
-  // Fetch PokemonsóTypes
+  // Fetch PokemonsTypes
   const fetchPokemonTypes = async () => {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${props.id}/`);
     const data = await res.json();
@@ -37,7 +37,11 @@ function CardItem(props) {
             <h5 className="cards__item__text">Types: </h5>
             {pokemonTypes.map((pokemonType, index) => {
               return (
-                <h5 className="cards__item__data" target={pokemonType.type.name} key={index}>
+                <h5
+                  className="cards__item__data"
+                  target={pokemonType.type.name}
+                  key={index}
+                >
                   {pokemonType.type.name}
                 </h5>
               );
